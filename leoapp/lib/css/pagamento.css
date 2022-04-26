@@ -1,0 +1,57 @@
+#cartao-credito{
+    margin: 3px 8px;
+    border-radius: 1%;
+
+    box-shadow: 2px 2px 5px 5px rgba(167, 167, 167, 0.77);
+    background-color:white;
+}
+
+#form-cartao{
+    display: inline-block;
+    justify-content: center;
+    margin: 6px 6px;
+    padding: 10px 5px;
+}
+
+.item-form-cartao{
+    margin: 3px;
+    padding: 1px;
+
+    font-size: 12px;
+    font-weight: bold;
+    color: darkgray;
+}
+
+.cor-campo-foco{
+    color: black;
+}   
+
+    .item-form-cartao p{
+        padding-left: 7px;
+    }
+
+    .item-form-cartao input{
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 2px;
+        font-size: 24px;
+        border: 1px solid darkgray;
+        border-radius: 4px;
+    }
+    .item-form-cartao:hover{
+        color: rgba(59, 58, 58, 0.848);
+    }
+
+    #num-cartao{
+        color: darkgray;
+        font-weight: 100;
+    }
+
+    .val-cartao input{
+        color: darkgray;
+    }
+
+    .cvv-cartao{
+        margin-left: 18px;
+    }
+

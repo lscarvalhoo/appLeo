@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(203, 199, 199);
+    justify-items: center;
+}
+
+#lista-itens{
+    font-family: Helvetica Neue,sans-serif;
+    box-shadow: 0 16px 60px -20px rgba(10, 10, 10, 0.6);
+    background-color: rgb(226, 222, 222);
+}
+
+#top-lista{
+    box-shadow: 0 0 3px 3px rgba(167, 167, 167, 0.77);
+    background-color: white;
+}
+
+    #top-lista ul{
+        margin-top: 5px;
+        width: 100%;
+        height: 15px;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+        #top-lista ul li{
+                font-size: 13px;
+                font-weight: bold;
+                display: inline-block; 
+            }
+
+            .cor-titulo{
+                color: orange;
+            }
+
+            .cor-titulo-sec{
+                color: rgb(122, 122, 122);
+            }
+
+#titulo-etapa{
+    margin: 2px 15px;
+    padding: 0;
+    color: rgb(122, 122, 122);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#total-itens{
+    margin: 10px 10px;
+    border: 1px solid darkgray;
+    border-radius: 2%;
+}
+
+    #total-itens ul{
+        margin: 3px 10px;
+        padding: 3px 0;
+
+        list-style-type: none;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .val-total-itens{
+        font-weight: bold;
+    }
+
+#botao{
+    background-color:#f16e00;
+    text-align: center;
+
+    margin: 10px 8px 50px 8px;
+    padding: 0;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px 5px rgba(167, 167, 167, 0.77);
+}
+
+    #botao button{
+        margin: 18px 1px 18px 1px;
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+    }

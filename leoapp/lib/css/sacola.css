@@ -1,0 +1,48 @@
+
+#carrinho{
+    margin: 3px 8px;
+    border-radius: 1%;
+
+    box-shadow: 2px 2px 5px 5px rgba(167, 167, 167, 0.77);
+    background-color:white;
+}
+
+#itens-carrinho{
+    margin: 10px 3px;
+}
+
+#item-carrinho{
+    display: inline-block;
+    justify-content: space-between;
+    margin: 6px 6px;
+    border: 1px solid darkgray;
+    border-radius: 2%;
+}
+
+    #item-carrinho img{
+        margin: 6px 6px;
+        padding: 5px;
+    }
+
+    #item-carrinho ul{
+        list-style-type: none;
+        padding: 5px;
+        vertical-align: space-between;
+        justify-items: end;
+    }
+
+    #img-produto img{
+        width: 100px;
+        height: 100px;
+    }
+
+    #desc-produto{
+        margin: 12px 10px;
+        font-size:13px;
+    }
+
+    #preco-produto{
+        margin: 14px 10px;
+        font-size: 14px;
+        font-weight: bold;
+    }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/css/estilos.css">
+    <link rel="stylesheet" href="lib/css/pagamento.css">
+    <link rel="stylesheet" href="lib/css/sacola.css">   
+
+    <title>Pagamento</title>
+
+</head>
+<body>
+    <div id="lista-itens" class="card col-md-6 justify-content-center">
+        <div id="top-lista" class="container">
+            <div class="align-items-center justify-items-around">   
+                <ul id="titulo">
+                    <li class="cor-titulo-sec">
+                        SACOLA
+                    </li>
+                    <li class="cor-titulo">
+                        PAGAMENTO
+                    </li>
+                    <li class="cor-titulo-sec">
+                        CONFIRMAÇÃO
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p id="titulo-etapa">CARTÃO DE CRÉDITO</p>
+        <div id="cartao-credito">
+            <div id="form-cartao" class="col">
+                <div class="item-form-cartao">
+                    <p>Numero do cartão</p>
+                    <input type="text" class="text-center" value="---------.--------.--------.--------" 
+                            id="num-cartao" onchange="validaCartao(this.value)">
+                </div>
+                <div class="item-form-cartao">
+                    <p>Nome do Titular</p>
+                    <input type="text" class="text-center" id="nome-titular-cartao">
+                </div>
+                <div class="d-flex flex-row justify-content-start text-start">
+                    <div class="d-flex flex-column col-6 val-cartao item-form-cartao">
+                        <p>Validade (Mes/Ano)</p>
+                        <input type="text" class="text-center" value="___/___   " id="val-cartao">
+                    </div>
+                    <div class="d-flex flex-column col-5 cvv-cartao item-form-cartao">
+                        <p>CVV</p>
+                        <input type="text" class="text-center" id="cvv-cartao">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="total-itens">
+            
+        </div>
+
+        <div id="botao">
+            <button id="botao2" type="button" class="btn" >FINALIZAR O PEDIDO</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="lib/js/main.js"></script>
+    <script type="text/javascript" src="lib/js/pagamento.js"></script>
+
+</body>
+</html>
+
