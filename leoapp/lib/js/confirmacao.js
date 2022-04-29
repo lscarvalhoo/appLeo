@@ -4,14 +4,12 @@ request.open("GET", "http://www.mocky.io/v2/5b15c4923100004a006f3c07", true);
 request.send(); 
 
 function adicionaItensCarrinho(){
-    let myName = localStorage.getItem('informacoes')
-    console.log(myName)
-    
     var respostaXML = this.responseText;
     let resposta = JSON.parse(respostaXML); 
     resposta.items.forEach(element => { 
         adicionaItem(element);
     });
+    
     adicionaTotalItens(resposta);
 }
 
@@ -73,9 +71,8 @@ function criaTotalItens(element){
     let frete = element.shippingTotal;
     let desconto = element.discount;
     
-    element.items.forEach(element => {
-        console.log(element);
-        totalProdutos = totalProdutos + element.product.priceSpecification.price;
+    element.items.forEach(element => { 
+        totalProdutos += element.product.priceSpecification.price;
     });
 
     let total = (totalProdutos + frete) - desconto;

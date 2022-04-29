@@ -4,8 +4,7 @@ request.open("GET", "http://www.mocky.io/v2/5b15c4923100004a006f3c07", true);
 request.send(); 
 
 function trocaPagina() {
-    var url = "http://127.0.0.1:5500/leoapp/pagamento.html";
-    window.location.assign(url);
+    window.location.href = "http://127.0.0.1:5500/leoapp/pagamento.html";
 }
 
 document.getElementById("botao1").onclick = trocaPagina;
@@ -78,9 +77,8 @@ function criaTotalItens(element){
     let frete = element.shippingTotal;
     let desconto = element.discount;
     
-    element.items.forEach(element => {
-        console.log(element);
-        totalProdutos = totalProdutos + element.product.priceSpecification.price;
+    element.items.forEach(element => { 
+        totalProdutos +=  element.product.priceSpecification.price;
     });
 
     let total = (totalProdutos + frete) - desconto;

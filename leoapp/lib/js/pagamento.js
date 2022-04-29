@@ -4,8 +4,7 @@ document.getElementById("val-cartao").onfocus = apagaTextoValCartao;
 document.onchange = load;
 
 function trocaPagina() {
-    var url = "http://127.0.0.1:5500/leoapp/confirmacao.html";
-    window.location.assign(url);
+    window.location.href = "http://127.0.0.1:5500/leoapp/confirmacao.html";
 }
 
 var request = new XMLHttpRequest();
@@ -35,9 +34,8 @@ function criaTotalItens(element){
     let frete = element.shippingTotal;
     let desconto = element.discount;
     
-    element.items.forEach(element => {
-        console.log(element);
-        totalProdutos = totalProdutos + element.product.priceSpecification.price;
+    element.items.forEach(element => { 
+        totalProdutos += element.product.priceSpecification.price;
     });
 
     let total = (totalProdutos + frete) - desconto;
@@ -70,7 +68,6 @@ function criaTotalItens(element){
 
 function validaCartao(num){
 	var msg = Array();
-	var tipo = null;
 
 	if(num.length > 16 || num[0]==0){
 		
@@ -166,17 +163,17 @@ if(msg.length>0){
 	
 }
 
-function validaNome(nome){
+function validaNome(nome){ 
+   	var padrao = /[^a-zà-ú]/gi;
+   	var nomeCompleto = nome.replace(" ", ""); 
 
-   var padrao = /[^a-zà-ú]/gi;
+   	var valida_nome = nomeCompleto.match(padrao);
 
-   var valida_nome = nome.match(padrao);
-
-   if( valida_nome || !nome ){
-      return false;
-   }else{
-      return true;
-   }
+   	if( valida_nome || !nomeCompleto ){
+    	return false;
+   	}else{
+    	return true;
+   	}
 }
 
 function validaData(dataCartao){
@@ -215,17 +212,13 @@ function validator(){
     let numCartao = document.getElementById("num-cartao").value;
     let nomeTitular = document.getElementById("nome-titular-cartao").value;
 	let dataCartao = document.getElementById("val-cartao").value;
-	let cvvCartao = document.getElementById("cvv-cartao").value;
-
-    console.log(numCartao, nomeTitular);
+	let cvvCartao = document.getElementById("cvv-cartao").value; 
 
     let cartaoOk = validaCartao(numCartao);
     let nomeOk = validaNome(nomeTitular);
 	let dataOk = validaData(dataCartao);
 	let cvvOk = validaCVV(cvvCartao);
-
-    console.log(cartaoOk, nomeOk, dataOk, cvvOk);
-
+ 
     if(cartaoOk === true && nomeOk === true
 		&& dataOk === true && cvvOk === true){
         document.getElementById("botao2").onclick = trocaPagina;
